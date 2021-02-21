@@ -9,18 +9,18 @@ function preload() {
  }
 
 function setup(){
-  createCanvas(1550, 650);
+  createCanvas(1200, 520);
 
   weight = random(400,1500);
   speed  = random(55,99);
 
-  car = createSprite(100,325);
+  car = createSprite(100,260);
   car.addImage(mainCar);
   car.changeImage(mainCar);
-  car.scale = 0.4;
+  car.scale = 0.28;
   car.velocityX = speed;
 
-  wall = createSprite(1450,325,50,740);
+  wall = createSprite(1450,260,50,740);
   wall.shapeColor = ("white");
 }
 
@@ -31,16 +31,16 @@ function draw() {
   fill("blue");
   stroke("white");
   strokeWeight(20);
-  text("Global Car Safety Organisation",285,80);
+  text("Global Car Safety Organisation",155,80);
 
   textSize(25);
   fill("green");
   strokeWeight(0);
-  text("Green: deformation = < 100 (BEST)",50,550);
+  text("Green: deformation = < 100 (BEST)",50,440);
   fill("yellow");
-  text("Yellow: deformation = < 180 & > 100 (OK OK)",50,590);
+  text("Yellow: deformation = < 180 & > 100 (OK OK)",50,470);
   fill("red");
-  text("Red: deformation = > 180 (BAD)",50,620)
+  text("Red: deformation = > 180 (BAD)",50,500)
 
  if(car.isTouching (wall)){
    car.velocityX = 0;
