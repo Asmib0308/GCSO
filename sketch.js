@@ -9,18 +9,18 @@ function preload() {
  }
 
 function setup(){
-  createCanvas(1700, 800);
+  createCanvas(1550, 650);
 
   weight = random(400,1500);
   speed  = random(55,99);
 
-  car = createSprite(100,400);
+  car = createSprite(100,325);
   car.addImage(mainCar);
   car.changeImage(mainCar);
   car.scale = 0.4;
   car.velocityX = speed;
 
-  wall = createSprite(1600,400,50,740);
+  wall = createSprite(1450,325,50,740);
   wall.shapeColor = ("white");
 }
 
@@ -36,11 +36,11 @@ function draw() {
   textSize(25);
   fill("green");
   strokeWeight(0);
-  text("Green: deformation = < 100 (BEST)",50,690);
+  text("Green: deformation = < 100 (BEST)",50,550);
   fill("yellow");
-  text("Yellow: deformation = < 180 & > 100 (OK OK)",50,730);
+  text("Yellow: deformation = < 180 & > 100 (OK OK)",50,590);
   fill("red");
-  text("Red: deformation = > 180 (BAD)",50,770)
+  text("Red: deformation = > 180 (BAD)",50,620)
 
  if(car.isTouching (wall)){
    car.velocityX = 0;
